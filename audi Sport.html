@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="volkswagen.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-box">
+        <h2 >Select Manufacturer</h2> 
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search AUDI SPORT Model" oninput="searchImages()" style="width:300px;height:30px;">
+    </form>
+   
+   
+    <div id="imageContainer" style="color:black;">
+        <div class="image-item" data-tags="AUDI RS3">
+            <a href="file:///C:/xampp/htdocs/vehkApp/fuels.html?">
+               
+             <img src="audi rs3.jpeg" alt="AUDI RS3" style="width:110px; margin: 10px;">
+            </a>
+             <p>AUDI RS3</p>
+           
+        </div>
+        <div class="image-item" data-tags="AUDI RS Q3">
+            <a href="file:///C:/xampp/htdocs/vehkApp/fuels.html?">
+            <img src="audi rsq3.jpeg" alt="AUDI RS Q3" style="width:100px; margin: 10px;">
+        </a>
+            <p>AUDI RS Q3</p>
+        </div>
+        <div class="image-item" data-tags="AUDI RS5">
+            <a href="file:///C:/xampp/htdocs/vehkApp/fuels.html?">
+            <img src="audi rs5.jpeg" alt="AUDI RS5" style="width:100px; margin: 10px;">
+        </a>
+            <p>AUDI RS5</p>
+        </div>
+   
+<div class="image-item" data-tags="AUDI RS6 AVANT">
+    <a href="file:///C:/xampp/htdocs/vehkApp/fuels.html?">
+    <img src="audi rs6 avant.jpeg" alt="AUDI RS6 AVANT" style="width:100px; margin: 10px;">
+</a>
+ <p>AUDI RS6 AVANT</p>
+
+</div>
+<div class="image-item" data-tags="AUDI RS7">
+    <a href="file:///C:/xampp/htdocs/vehkApp/fuels.html?">
+    <img src="audi rs7.jpeg" alt="AUDI RS7" style="width:100px; margin: 10px;">
+</a>
+ <p>AUDI RS7</p>
+
+</div>
+<div class="image-item" data-tags="AUDI TT RS">
+    <a href="file:///C:/xampp/htdocs/vehkApp/fuels.html?">
+    <img src="Audi-TT-RS.png" alt="AUDI TT RS" style="width:100px; margin: 10px;">
+</a>
+ <p>AUDI TT RS</p>
+
+</div>
+<div class="image-item" data-tags="AUDI R8 LMS">
+    <a href="file:///C:/xampp/htdocs/vehkApp/fuels.html?">
+    <img src="audi r8 lms.jpeg" alt="AUDI R8 LMS" style="width:100px; margin: 10px;">
+</a>
+ <p>AUDI R8 LMS</p>
+
+</div>
+
+
+    </div>
+
+       
+    </div>
+
+    <script>
+        function searchImages() {
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const images = document.getElementsByClassName('image-item');
+
+            for (let i = 0; i < images.length; i++) {
+                const image = images[i];
+                const tags = image.getAttribute('data-tags').toLowerCase();
+
+                if (tags.includes(searchQuery)) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            }
+        }
+    </script>
+    
+   
+
+</body>
+</html>
+
